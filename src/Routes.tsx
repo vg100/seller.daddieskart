@@ -167,7 +167,7 @@ import CardTwoFA from './pages/pages/authentication/card/TwoFA';
 import CardLockScreen from './pages/pages/authentication/card/LockScreen';
 import Showcase from './pages/Showcase';
 
-const ecommerceRoutes: RouteObject[] = [
+const sellerRoutes: RouteObject[] = [
     {
         element: <App1 />,
         children:[
@@ -983,6 +983,7 @@ const AuthRoutes:RouteObject[]=[
   {
     element: <App1 />,
     children:[
+      // ...sellerRoutes,
       {
         path: '/',
         element: <CardSignIn />
@@ -996,7 +997,7 @@ const AuthRoutes:RouteObject[]=[
 
 
 const routes: RouteObject[] = [
-    ...AuthRoutes,
+    ...sellerRoutes,
 ];
 
 export const router = createBrowserRouter(routes);

@@ -11,6 +11,22 @@ const NavbarBrand = () => {
     config: { navbarTopShape, navbarPosition }
   } = useAppContext();
   const { breakpoints } = useBreakpoints();
+  const logoStyle = {
+    fontFamily: 'Comic Sans MS',
+    color: '#333',
+    fontSize: '28px',
+    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
+  };
+
+  const dotStyle = {
+    color: '#FF6347',
+    fontSize: '32px',
+  };
+
+  const comStyle = {
+    fontFamily: 'Arial, sans-serif',
+    fontSize: '18px',
+  };
 
   return (
     <>
@@ -34,7 +50,17 @@ const NavbarBrand = () => {
           ) : (
             <div className="d-flex align-items-center">
               {/* <img src={logo} alt="phoenix" width={27} /> */}
-              <p className="logo-text ms-2 d-none d-sm-block">DaddiesKart <span>Seller Pannel</span></p>
+
+              <div className="" style={logoStyle}>
+              <span style={{ fontWeight: 'bold' }}>S</span>eller
+              <span style={dotStyle}>.</span>
+                <span style={{ fontWeight: 'bold' }}>d</span>addies
+                <span style={{ color: '#FF6347', fontWeight: 'bold' }}>K</span>art
+                <span style={dotStyle}>.</span>
+                <span style={comStyle}>com</span>
+              </div>
+
+              {/* <p className="logo-text ms-2 d-none d-sm-block">DaddiesKart <span>Seller Pannel</span></p> */}
             </div>
           )}
         </Navbar.Brand>
